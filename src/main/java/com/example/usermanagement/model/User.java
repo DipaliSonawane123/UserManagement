@@ -4,12 +4,10 @@ import com.example.usermanagement.dto.LoginDto;
 import com.example.usermanagement.dto.UserDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,6 +23,8 @@ public class User {
     String middleName;
     String lastName;
     int age;
+
+    String profilePic;
     String gender;
     String contactNo;
     String emailId;
@@ -33,7 +33,7 @@ public class User {
     String role;
     LocalDateTime createdTimeStamp = LocalDateTime.now();
     LocalDateTime updatedTimeStamp = LocalDateTime.now();
-    private boolean verified = false;
+     boolean verified = false;
 
 
     public User(UserDto userDTO){
@@ -41,6 +41,7 @@ public class User {
         this.middleName=userDTO.getMiddleName();
         this.lastName=userDTO.getLastName();
         this.age=userDTO.getAge();
+        this.profilePic= userDTO.getProfilePic();
         this.gender=userDTO.getGender();
         this.contactNo=userDTO.getContactNo();
         this.emailId=userDTO.getEmailId();

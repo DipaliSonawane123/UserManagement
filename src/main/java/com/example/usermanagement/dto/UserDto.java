@@ -2,8 +2,6 @@ package com.example.usermanagement.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-
 import java.time.LocalDateTime;
 
 @Data
@@ -15,6 +13,7 @@ public class UserDto {
     String middleName;
     String lastName;
     int age;
+    String profilePic;
     String gender;
     String contactNo;
     String emailId;
@@ -23,6 +22,6 @@ public class UserDto {
     String role;
     LocalDateTime createdTimeStamp = LocalDateTime.now();
     LocalDateTime updatedTimeStamp = LocalDateTime.now();
-//    private boolean verified = false;
+    boolean verified = false;
 }
 
