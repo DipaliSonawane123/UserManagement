@@ -5,6 +5,9 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+/**
+ * User DTO class for add data of user as per requirement
+ */
 @Data
 @NoArgsConstructor
 

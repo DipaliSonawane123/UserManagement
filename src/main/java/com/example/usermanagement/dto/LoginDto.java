@@ -4,8 +4,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
-import java.time.LocalDateTime;
 
+/**
+ * login DTO class login credential for login user
+ */
 @Data
 @NoArgsConstructor
 public class LoginDto {

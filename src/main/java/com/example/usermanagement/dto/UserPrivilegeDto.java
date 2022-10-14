@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
+/**
+ * UserPrivilege DTO class for add permission for user
+ */
 
 @AllArgsConstructor
 @NoArgsConstructor

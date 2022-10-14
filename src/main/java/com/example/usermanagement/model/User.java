@@ -10,7 +10,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
-
+/**
+ *Entity class of user for creating table of user details
+ */
 @Entity
 @NoArgsConstructor
 @Data

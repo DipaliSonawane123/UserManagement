@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Repository interface to save data in SQL by using abstraction of JPARepository inbuilt class
+ */
 @Repository
 public interface LoginHistoryRepo extends JpaRepository<LoginHistory, Integer> {
     @Query(value = "SELECT * FROM login_historys WHERE email_id =:email  ", nativeQuery = true)

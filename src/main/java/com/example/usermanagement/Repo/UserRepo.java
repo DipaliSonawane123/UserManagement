@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Repository interface to save data in SQL by using abstraction of JPARepository inbuilt class
+ */
 @Repository
 public interface UserRepo extends JpaRepository<User, Integer> {
     @Query(value = "SELECT * FROM user WHERE  email_id = :email", nativeQuery = true)
@@ -28,7 +31,7 @@ public interface UserRepo extends JpaRepository<User, Integer> {
     List<User> findByGender(String gender);
 
     @Query(value = "SELECT * FROM user ORDER BY created_time_stamp DESC LIMIT 10 ", nativeQuery = true)
-    List<User> getRecentTegistration();
+    List<User> getRecentRegistration();
 
     @Query(value = "SELECT * FROM user ORDER BY created_time_stamp  ", nativeQuery = true)
     List<User> getAllregistration();

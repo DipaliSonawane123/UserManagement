@@ -9,10 +9,13 @@ import com.example.usermanagement.model.UserPrivilege;
 
 import java.util.List;
 
+/**
+ * Interface for extends userservice interface
+ */
 public interface Iuserservice {
     String insertRecord(UserDto addressDto);
 
-    List<User> getall();
+    List<User> getAll();
 
     String resetPassword(LoginDto loginDto);
 
@@ -27,17 +30,17 @@ public interface Iuserservice {
 
     int getAllUsersByAge();
 
-    User changeCartQty(int userId, String profilePic);
+    User changeProfilePic(int userId, String profilePic);
 
-    int getAllUsersbyLocation(String address);
+    int getAllUsersForLocation(String address);
 
-    int getAllUsersbyGender(String gender);
+    int getPercentageForGender(String gender);
 
     List<User> getRecentRegistrationList();
 
     List<User> getAllRegistrationList();
 
-    UserPrivilege addpermission(UserPrivilegeDto userPrivilegeDto);
+    UserPrivilege addPermission(UserPrivilegeDto userPrivilegeDto);
 
     int getAllUsersByAgeAbove40();
 

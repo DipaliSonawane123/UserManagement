@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
+/**
+ * class for implementing AOP(Aspect oriented programming)
+ */
 @Aspect
 @Component
 public class MyAspectjService {

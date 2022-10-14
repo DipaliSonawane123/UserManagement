@@ -1,11 +1,14 @@
 package com.example.usermanagement.model;
 
-import com.example.usermanagement.dto.UserPrivilegeDto;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * Entity class for creating userPrivilege table
+ */
 @Entity
 @NoArgsConstructor
 @Data

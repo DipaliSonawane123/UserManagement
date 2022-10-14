@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+/**
+ * Entity class for creating login history table
+ */
 @Entity
 @NoArgsConstructor
 @Data

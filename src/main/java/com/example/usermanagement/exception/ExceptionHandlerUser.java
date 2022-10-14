@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Customize exception handler for Userexception Class
+ */
 @ControllerAdvice
 @Slf4j
 public class ExceptionHandlerUser {
