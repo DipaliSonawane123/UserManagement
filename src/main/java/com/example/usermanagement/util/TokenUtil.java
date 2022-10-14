@@ -9,12 +9,16 @@ import com.auth0.jwt.interfaces.JWTVerifier;
 import com.auth0.jwt.interfaces.Verification;
 import org.springframework.stereotype.Component;
 
-
+/**
+ * Class for JWT (JSON Web Token)
+ */
 @Component
 public class TokenUtil {
     private static final String TOKEN_SECRET = "BookStore";
 
-
+    /**
+     * Method for generate token
+     */
     public String createToken(int id) {
 
         try {
@@ -37,8 +41,7 @@ public class TokenUtil {
     }
 
     /**
-     * @param token
-     * @return
+     * Method for decode token
      */
     public int decodeToken(String token) {
         int id;

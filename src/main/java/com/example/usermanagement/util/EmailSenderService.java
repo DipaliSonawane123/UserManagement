@@ -5,6 +5,9 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
+/**
+ * Class for JMS (Java mail services )
+ */
 @Component
 public class EmailSenderService {
     @Autowired

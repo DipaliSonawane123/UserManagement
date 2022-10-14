@@ -128,8 +128,8 @@ public class UserController {
      * GET Api for get  group of particular Age between 18 and 40
      */
     @GetMapping("/getGroupByAge-18to40")
-    public ResponseEntity<ResponseDto> getAllUsersByAge() {
-        int newUser = service.getAllUsersByAge();
+    public ResponseEntity<ResponseDto> getAllUsersByAgeBetween18to40() {
+        int newUser = service.getAllUsersByAgeBetween18to40();
         ResponseDto responseDTO = new ResponseDto("All Users Age records retrieved successfully !", newUser);
         return new ResponseEntity(responseDTO, HttpStatus.OK);
     }

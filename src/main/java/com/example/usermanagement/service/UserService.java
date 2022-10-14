@@ -37,10 +37,6 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to  register new user to the database.
-     *
-     * @param userDto
-     * @return
-     * @throws UserException
      */
     @Override
     public String insertRecord(UserDto userDto) throws UserException {
@@ -53,25 +49,19 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to send admin or user their  password credentials on there respective mail id.
-     *
-     * @param email
-     * @return
      */
     @Override
     public String forgotPassword(String email) {
-        User editdata = userRepo.findByEmail(email);
-        if (editdata != null) {
-            emailSender.sendEmail(editdata.getEmailId(), "About Login", "http://localhost:5000/user/resetPassword/" + email);
-            return "Reset link send sucessfully";
+        User data = userRepo.findByEmail(email);
+        if (data != null) {
+            emailSender.sendEmail(data.getEmailId(), "About Login", "http://localhost:5000/user/resetPassword/" + email);
+            return "Reset link send successfully";
         } else
             throw new UserException("Login Failed, Wrong email or password!!!");
     }
 
     /**
      * Method to verify user
-     *
-     * @param token
-     * @return
      */
     @Override
     public User verifyUser(String token) {
@@ -84,10 +74,7 @@ public class UserService implements Iuserservice {
     }
 
     /**
-     * Method to  login the user.
-     *
-     * @param loginDTO
-     * @return
+     * Method to  Log in the user.
      */
     @Override
     public User loginUser(LoginDto loginDTO) {
@@ -98,11 +85,11 @@ public class UserService implements Iuserservice {
             //String pass = login.get().getPassword();
             if (userDetails.get().getPassword().equals(loginDTO.getPassword()) && userDetails1 == true) {
                 LocalDateTime loginDateTime = LocalDateTime.now();
-                LoginHistory loginHistorys = new LoginHistory();
-                loginHistorys.setLoginDataTime(loginDateTime);
-                loginHistorys.setEmailId(loginDTO.getEmail());
-                loginHistorys.setUserId(userDetails.get().getUserId());
-                loginHistoryRepo.save(loginHistorys);
+                LoginHistory loginHistory = new LoginHistory();
+                loginHistory.setLoginDataTime(loginDateTime);
+                loginHistory.setEmailId(loginDTO.getEmail());
+                loginHistory.setUserId(userDetails.get().getUserId());
+                loginHistoryRepo.save(loginHistory);
                 emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "Login Successful!");
                 return userDetails.get();
             } else if (userDetails1 == false)
@@ -115,10 +102,6 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to update the profile of particular admin/user. using id
-     *
-     * @param id
-     * @param userDto
-     * @return
      */
     @Override
     public String editById(int id, UserDto userDto) {
@@ -144,8 +127,6 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to get total number of users in a particular age group.
-     *
-     * @return
      */
     @Override
     public int getAllUsersByAgeUnder18() {
@@ -155,25 +136,19 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to get  login history of particular admin/user.
-     *
-     * @param email
-     * @return
      */
     @Override
     public List<LoginHistory> getLoginHistory(String email) {
-        List<LoginHistory> loginHistorys = loginHistoryRepo.findbyemail(email);
-        if (loginHistorys.isEmpty())
+        List<LoginHistory> loginHistory = loginHistoryRepo.findbyemail(email);
+        if (loginHistory.isEmpty())
             throw new UserException("No login history");
         else {
-            return loginHistorys;
+            return loginHistory;
         }
     }
 
     /**
      * Method to  get the profile data of  admin/user by id.
-     *
-     * @param id
-     * @return
      */
     @Override
     public User findUserById(int id) {
@@ -182,15 +157,12 @@ public class UserService implements Iuserservice {
             return user.get();
         else {
 
-            return null;
+            throw new UserException("** Id is not present ***");
         }
     }
 
     /**
      * Method to  get the profile picture of admin/user in base64 encoded string.
-     *
-     * @param id
-     * @return
      */
     @Override
     public String findProfilePic(int id) {
@@ -206,19 +178,15 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to get total number of users in a particular age group.
-     *
-     * @return
      */
     @Override
-    public int getAllUsersByAge() {
+    public int getAllUsersByAgeBetween18to40() {
         List<User> users = userRepo.findByAge();
         return users.size();
     }
 
     /**
      * Method to get total number of users in a particular age group.
-     *
-     * @return
      */
     @Override
     public int getAllUsersByAgeAbove40() {
@@ -228,10 +196,6 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to change profile pic
-     *
-     * @param userId
-     * @param profilePic
-     * @return
      */
     @Override
     public User changeProfilePic(int userId, String profilePic) {
@@ -245,9 +209,6 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to  get total numbers of  user at particular location.
-     *
-     * @param address
-     * @return
      */
     @Override
     public int getAllUsersForLocation(String address) {
@@ -258,9 +219,6 @@ public class UserService implements Iuserservice {
 
     /**
      * Method to get  percentage of particular gender.
-     *
-     * @param gender
-     * @return
      */
     @Override
     public int getPercentageForGender(String gender) {
@@ -268,38 +226,28 @@ public class UserService implements Iuserservice {
         int obtained = users.size();
         List<User> userList = getAll();
         int total = userList.size();
-        int percentage = obtained * 100 / total;
-        return percentage;
+        return obtained * 100 / total;
     }
 
     /**
-     * Method to get the list of lastest registeration
-     *
-     * @return
+     * Method to get the list of the latest registration
      */
 
     @Override
     public List<User> getRecentRegistrationList() {
-        List<User> user = userRepo.getRecentRegistration();
-        return user;
+        return userRepo.getRecentRegistration();
     }
 
     /**
-     * Method to get all time registeration history of users.
-     *
-     * @return
+     * Method to get all time registration history of users.
      */
     @Override
     public List<User> getAllRegistrationList() {
-        List<User> user = userRepo.getAllregistration();
-        return user;
+        return userRepo.getAllregistration();
     }
 
     /**
-     * Method to update the privileges associated with user
-     *
-     * @param userPrivilegeDto
-     * @return
+     * Method to update the privileges associated with user.
      */
     @Override
     public UserPrivilege addPermission(UserPrivilegeDto userPrivilegeDto) {
@@ -314,25 +262,19 @@ public class UserService implements Iuserservice {
             userPrivilegeRepo.save(details);
             return details;
         } else
-            throw new UserException(" userid and bookid is invalid");
+            throw new UserException(" userid is invalid");
     }
 
     /**
      * Method to get list of all users.
-     *
-     * @return
      */
     @Override
     public List<User> getAll() {
-        List<User> order = userRepo.findAll();
-        return order;
+        return userRepo.findAll();
     }
 
     /**
      * Method to reset password.
-     *
-     * @param loginDTO
-     * @return
      */
     @Override
     public String resetPassword(LoginDto loginDTO) {

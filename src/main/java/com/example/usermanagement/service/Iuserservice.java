@@ -28,7 +28,7 @@ public interface Iuserservice {
 
     String editById(int id, UserDto userDto);
 
-    int getAllUsersByAge();
+    int getAllUsersByAgeBetween18to40();
 
     User changeProfilePic(int userId, String profilePic);
 

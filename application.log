@@ -2627,3 +2627,165 @@ java.util.NoSuchElementException: No value present
 2022-14-10 15:22[INFO][SpringApplicationShutdownHook][o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl:538]HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2022-14-10 15:22[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
 2022-14-10 15:22[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 18:41[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 14948 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 18:41[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 18:41[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 18:41[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 18:41[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 18:41[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2022-14-10 18:41[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 18:41[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 18:41[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 18:41[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 18:41[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 3807 ms
+2022-14-10 18:41[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 18:41[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 18:41[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 18:41[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 18:41[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 18:41[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 18:41[WARN][restartedMain][o.h.t.s.i.ExceptionHandlerLoggedImpl:27]GenerationTarget encountered exception accepting command : Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'usermanegment.user_privilege' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+2022-14-10 18:41[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 18:41[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 18:41[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 18:41[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 18:41[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 18:41[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 18:41[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 7.978 seconds (JVM running for 8.795)
+2022-14-10 18:41[INFO][restartedMain][c.e.u.UserManagementApplication:15]Application Loaded Successfully.
+2022-14-10 18:46[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 18:46[INFO][SpringApplicationShutdownHook][o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl:538]HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-14-10 18:46[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 18:46[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 18:46[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 16892 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 18:46[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 18:46[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 18:46[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 18:46[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 18:46[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2022-14-10 18:47[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 18:47[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 18:47[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 18:47[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 18:47[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 2328 ms
+2022-14-10 18:47[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 18:47[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 18:47[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 18:47[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 18:47[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 18:47[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 18:47[WARN][restartedMain][o.h.t.s.i.ExceptionHandlerLoggedImpl:27]GenerationTarget encountered exception accepting command : Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'usermanegment.user_privilege' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+2022-14-10 18:47[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 18:47[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 18:47[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 18:47[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 18:47[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 18:47[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 18:47[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 6.259 seconds (JVM running for 6.976)
+2022-14-10 18:47[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 18:47[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 18:47[INFO][SpringApplicationShutdownHook][o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl:538]HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-14-10 18:47[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 18:47[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
