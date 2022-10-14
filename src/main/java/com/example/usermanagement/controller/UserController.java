@@ -213,4 +213,11 @@ public class UserController {
         ResponseDto responseDTO = new ResponseDto("Recent Registration....", loginHistory);
         return new ResponseEntity(responseDTO, HttpStatus.OK);
     }
+    @PutMapping("/logout/{userId}")
+    public ResponseEntity<ResponseDto> logoutUser(@PathVariable int userId ) {
+        User response= service.logout(userId);
+        ResponseDto responseDto=new ResponseDto("logout sucessfully",response);
+        return new ResponseEntity<>(responseDto,HttpStatus.OK);
+
+    }
 }

@@ -89,6 +89,8 @@ public class UserService implements Iuserservice {
                     loginHistorys.setLoginDataTime(loginDateTime);
                     loginHistorys.setEmailId(loginDto.getEmail());
                     loginHistorys.setUserId(userDetails.get().getUserId());
+                     userDetails.get().setStatus(true);
+                      userRepo.save(userDetails.get());
                     loginHistoryRepo.save(loginHistorys);
                     emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "Login Successful!");
                     return userDetails.get();
@@ -122,6 +124,7 @@ public class UserService implements Iuserservice {
             editUser.setPassword(userDto.getPassword());
             editUser.setAddress(userDto.getAddress());
             editUser.setRole(userDto.getRole());
+
             userRepo.save(editUser);
             String token = tokenUtil.createToken(editUser.getUserId());
             emailSender.sendEmail(editUser.getEmailId(), "Added Your Details", "http://localhost:5000/user/verify/" + token);
@@ -179,6 +182,16 @@ public class UserService implements Iuserservice {
             return "Profile pic not present";
         }
 
+    }
+    @Override
+    public User logout(int userId) {
+        Optional<User> user = userRepo.findById(userId);
+        if (user.isPresent()) {
+            user.get().setStatus(false);
+            userRepo.save(user.get());
+            return user.get();
+        } else
+            throw new UserException("user id is not present");
     }
 
     /**

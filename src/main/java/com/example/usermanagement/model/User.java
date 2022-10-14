@@ -20,7 +20,7 @@ public class User {
 
     //User Entities
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int userId;
     String firstName;
     String middleName;
@@ -37,6 +37,8 @@ public class User {
     LocalDateTime createdTimeStamp = LocalDateTime.now();
     LocalDateTime updatedTimeStamp = LocalDateTime.now();
     boolean verified = false;
+    boolean status = false;
+
 
 
     public User(UserDto userDTO) {
@@ -53,8 +55,6 @@ public class User {
         this.role = userDTO.getRole();
         this.createdTimeStamp = userDTO.getCreatedTimeStamp();
         this.updatedTimeStamp = userDTO.getUpdatedTimeStamp();
-
-
     }
 
     public User(LoginDto logindto) {

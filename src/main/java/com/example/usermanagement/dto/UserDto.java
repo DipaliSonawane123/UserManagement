@@ -26,7 +26,7 @@ public class UserDto {
     String role;
     LocalDateTime createdTimeStamp = LocalDateTime.now();
     LocalDateTime updatedTimeStamp = LocalDateTime.now();
-    boolean verified = false;
+
 
 }
 

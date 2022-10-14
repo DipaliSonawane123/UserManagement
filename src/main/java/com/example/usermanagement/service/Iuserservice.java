@@ -51,4 +51,6 @@ public interface Iuserservice {
     User findUserById(int id);
 
     String findProfilePic(int id);
+
+    User logout(int userId);
 }
