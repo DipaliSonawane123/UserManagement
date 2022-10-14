@@ -77,28 +77,33 @@ public class UserService implements Iuserservice {
      * Method to  Log in the user.
      */
     @Override
-    public User loginUser(LoginDto loginDTO) {
-
-        Optional<User> userDetails = Optional.ofNullable(userRepo.findByEmail(loginDTO.getEmail()));
-        boolean userDetails1 = userDetails.get().isVerified();
+    public User loginUser(LoginDto loginDto) {
+        Optional<User> userDetails = Optional.ofNullable(userRepo.findByEmail(loginDto.getEmail()));
         if (userDetails.isPresent()) {
-            //String pass = login.get().getPassword();
-            if (userDetails.get().getPassword().equals(loginDTO.getPassword()) && userDetails1 == true) {
-                LocalDateTime loginDateTime = LocalDateTime.now();
-                LoginHistory loginHistory = new LoginHistory();
-                loginHistory.setLoginDataTime(loginDateTime);
-                loginHistory.setEmailId(loginDTO.getEmail());
-                loginHistory.setUserId(userDetails.get().getUserId());
-                loginHistoryRepo.save(loginHistory);
-                emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "Login Successful!");
-                return userDetails.get();
-            } else if (userDetails1 == false)
-                emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "Invalid password!");
-            throw new UserException("user is present but not valid!!!");
+            boolean userDetails1 = userDetails.get().isVerified();
+            if (userDetails1 == true) {
+                //String pass = login.get().getPassword();
+                if (userDetails.get().getPassword().equals(loginDto.getPassword())) {
+                    LocalDateTime loginDateTime = LocalDateTime.now();
+                    LoginHistory loginHistorys = new LoginHistory();
+                    loginHistorys.setLoginDataTime(loginDateTime);
+                    loginHistorys.setEmailId(loginDto.getEmail());
+                    loginHistorys.setUserId(userDetails.get().getUserId());
+                    loginHistoryRepo.save(loginHistorys);
+                    emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "Login Successful!");
+                    return userDetails.get();
+
+                } else
+                    emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "Invalid password!");
+                throw new UserException("Wrong Password!");
+            } else
+                emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "User is present but not valid!");
+            throw new UserException("user is present but not verified!");
 
         } else
             throw new UserException("Login Failed, Wrong email or password!!!");
     }
+
 
     /**
      * Method to update the profile of particular admin/user. using id

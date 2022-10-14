@@ -2789,3 +2789,721 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'usermanegment.user_privilege
 2022-14-10 18:47[INFO][SpringApplicationShutdownHook][o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl:538]HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2022-14-10 18:47[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
 2022-14-10 18:47[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 20:29[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 9668 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 20:29[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 20:29[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 20:29[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 20:29[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 20:29[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2022-14-10 20:29[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 20:29[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 20:29[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 20:29[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 20:29[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 3722 ms
+2022-14-10 20:29[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 20:29[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 20:29[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 20:29[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 20:29[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 20:29[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 20:29[WARN][restartedMain][o.h.t.s.i.ExceptionHandlerLoggedImpl:27]GenerationTarget encountered exception accepting command : Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'usermanegment.user_privilege' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+2022-14-10 20:29[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 20:29[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 20:29[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 20:29[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 20:29[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 20:29[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 20:29[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 8.615 seconds (JVM running for 11.414)
+2022-14-10 20:29[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 20:30[INFO][http-nio-5000-exec-2][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 20:30[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 20:30[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:547]Completed initialization in 0 ms
+2022-14-10 20:32[WARN][http-nio-5000-exec-4][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 20:32[WARN][http-nio-5000-exec-9][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 20:32[WARN][http-nio-5000-exec-1][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 20:39[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 20:39[INFO][SpringApplicationShutdownHook][o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl:538]HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-14-10 20:39[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 20:39[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 20:39[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 13864 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 20:39[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 20:39[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 20:39[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 20:39[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 20:39[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 97 ms. Found 3 JPA repository interfaces.
+2022-14-10 20:39[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 20:39[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 20:39[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 20:39[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 20:39[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 2578 ms
+2022-14-10 20:39[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 20:39[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 20:39[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 20:39[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 20:39[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 20:39[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 20:39[WARN][restartedMain][o.h.t.s.i.ExceptionHandlerLoggedImpl:27]GenerationTarget encountered exception accepting command : Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'usermanegment.user_privilege' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+2022-14-10 20:39[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 20:39[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 20:39[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 20:39[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 20:39[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 20:39[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 20:39[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 7.017 seconds (JVM running for 7.847)
+2022-14-10 20:39[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 20:40[INFO][http-nio-5000-exec-2][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 20:40[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 20:40[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:547]Completed initialization in 1 ms
+2022-14-10 20:41[WARN][http-nio-5000-exec-6][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 20:41[ERROR][http-nio-5000-exec-8][o.a.c.c.C.[.[.[.[dispatcherServlet]:175]Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	at com.example.usermanagement.service.UserService.loginUser(UserService.java:83)
+	at com.example.usermanagement.service.UserService$$FastClassBySpringCGLIB$$25051482.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.example.usermanagement.service.UserService$$EnhancerBySpringCGLIB$$7a306ab7.loginUser(<generated>)
+	at com.example.usermanagement.controller.UserController.loginUser(UserController.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-14-10 20:59[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 20:59[INFO][SpringApplicationShutdownHook][o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl:538]HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-14-10 20:59[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 20:59[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 20:59[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 18204 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 20:59[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 20:59[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 20:59[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 20:59[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 20:59[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2022-14-10 20:59[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 20:59[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 20:59[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 20:59[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 20:59[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 2802 ms
+2022-14-10 20:59[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 20:59[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 20:59[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 20:59[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 20:59[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 20:59[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 20:59[WARN][restartedMain][o.h.t.s.i.ExceptionHandlerLoggedImpl:27]GenerationTarget encountered exception accepting command : Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table user_privilege drop foreign key FKbun0vye5x60x4jat4inmt6wbj" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'usermanegment.user_privilege' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+2022-14-10 20:59[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 20:59[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 20:59[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 20:59[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 20:59[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 20:59[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 20:59[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 7.916 seconds (JVM running for 9.095)
+2022-14-10 20:59[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:00[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:00[INFO][SpringApplicationShutdownHook][o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl:538]HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-14-10 21:00[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:00[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:00[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 1836 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:00[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:00[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:00[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:00[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:00[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:00[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:00[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:00[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:00[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:00[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 2546 ms
+2022-14-10 21:00[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:00[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:00[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:00[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:00[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:00[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:00[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:00[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:00[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:00[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:00[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:00[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:00[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 8.848 seconds (JVM running for 9.71)
+2022-14-10 21:00[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:02[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:02[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:02[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:02[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 13376 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:02[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:02[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:02[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:02[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:02[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 97 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:02[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:02[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:02[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:02[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:02[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 3945 ms
+2022-14-10 21:02[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:02[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:02[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:02[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:02[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:02[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:02[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:02[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:02[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:02[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:02[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:02[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:02[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 9.881 seconds (JVM running for 10.89)
+2022-14-10 21:02[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:02[INFO][http-nio-5000-exec-2][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 21:02[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 21:02[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:547]Completed initialization in 0 ms
+2022-14-10 21:03[WARN][http-nio-5000-exec-6][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 21:03[WARN][http-nio-5000-exec-8][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 21:03[ERROR][http-nio-5000-exec-10][o.a.c.c.C.[.[.[.[dispatcherServlet]:175]Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	at com.example.usermanagement.service.UserService.loginUser(UserService.java:86)
+	at com.example.usermanagement.service.UserService$$FastClassBySpringCGLIB$$25051482.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.example.usermanagement.service.UserService$$EnhancerBySpringCGLIB$$e99b6134.loginUser(<generated>)
+	at com.example.usermanagement.controller.UserController.loginUser(UserController.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-14-10 21:07[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:07[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:07[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:07[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 18376 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:07[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:07[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:07[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:07[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:07[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:07[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:07[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:07[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:07[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:07[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 3057 ms
+2022-14-10 21:07[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:07[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:07[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:07[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:07[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:07[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:07[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:07[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:07[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:07[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:07[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:07[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:07[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 8.243 seconds (JVM running for 9.199)
+2022-14-10 21:07[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:08[INFO][http-nio-5000-exec-2][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 21:08[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 21:08[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:547]Completed initialization in 1 ms
+2022-14-10 21:08[WARN][http-nio-5000-exec-2][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 21:08[WARN][http-nio-5000-exec-5][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not valid!!!]
+2022-14-10 21:14[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:14[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:14[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:14[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 14948 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:14[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:14[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:14[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:14[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:14[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:14[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:14[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:14[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:14[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:14[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 2771 ms
+2022-14-10 21:14[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:14[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:14[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:14[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:14[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:14[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:14[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:14[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:14[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:14[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:14[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:14[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:14[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 8.418 seconds (JVM running for 9.344)
+2022-14-10 21:14[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:14[INFO][http-nio-5000-exec-2][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 21:14[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 21:14[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:547]Completed initialization in 1 ms
+2022-14-10 21:15[WARN][http-nio-5000-exec-2][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: Wrong Password!]
+2022-14-10 21:15[WARN][http-nio-5000-exec-10][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: Login Failed, Wrong email or password!!!]
+2022-14-10 21:26[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:26[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:26[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:26[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 8208 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:26[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:26[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:26[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:26[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:26[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:26[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:26[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:26[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:26[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:26[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 2781 ms
+2022-14-10 21:26[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:26[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:26[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:26[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:26[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:26[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:26[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:26[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:26[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:26[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:26[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:26[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:26[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 7.337 seconds (JVM running for 8.129)
+2022-14-10 21:26[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:27[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:27[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:27[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:27[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 12404 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:27[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:27[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:27[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:27[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:27[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 97 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:27[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:27[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:27[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:27[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:27[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 3465 ms
+2022-14-10 21:27[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:27[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:27[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:27[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:27[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:27[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:27[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:27[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:27[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:27[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:27[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:27[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:27[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 8.524 seconds (JVM running for 9.536)
+2022-14-10 21:27[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:28[INFO][http-nio-5000-exec-2][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 21:28[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 21:28[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:547]Completed initialization in 1 ms
+2022-14-10 21:28[ERROR][http-nio-5000-exec-2][o.a.c.c.C.[.[.[.[dispatcherServlet]:175]Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.example.usermanagement.service.UserService.loginUser(UserService.java:82)
+	at com.example.usermanagement.service.UserService$$FastClassBySpringCGLIB$$25051482.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.example.usermanagement.service.UserService$$EnhancerBySpringCGLIB$$8ea2b97f.loginUser(<generated>)
+	at com.example.usermanagement.controller.UserController.loginUser(UserController.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-14-10 21:29[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:29[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:29[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:29[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 15464 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:29[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:29[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:29[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:29[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:29[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 78 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:29[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:29[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:29[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:29[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:29[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 3263 ms
+2022-14-10 21:29[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:29[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:29[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:29[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:29[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:29[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:29[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:29[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:29[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:29[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:29[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:29[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:29[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 8.528 seconds (JVM running for 9.365)
+2022-14-10 21:29[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:29[INFO][http-nio-5000-exec-2][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 21:29[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 21:29[INFO][http-nio-5000-exec-2][o.s.w.s.DispatcherServlet:547]Completed initialization in 1 ms
+2022-14-10 21:29[WARN][http-nio-5000-exec-2][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: Login Failed, Wrong email or password!!!]
+2022-14-10 21:37[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:37[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 21:37[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
+2022-14-10 21:50[INFO][restartedMain][c.e.u.UserManagementApplication:55]Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-T25H6CF with PID 12980 (C:\Users\Admin\IdeaProjects\Usermanagement\target\classes started by Admin in C:\Users\Admin\IdeaProjects\Usermanagement)
+2022-14-10 21:50[INFO][restartedMain][c.e.u.UserManagementApplication:640]The following 1 profile is active: "dev"
+2022-14-10 21:50[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-10 21:50[INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255]For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-10 21:50[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132]Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-10 21:50[INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201]Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2022-14-10 21:50[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108]Tomcat initialized with port(s): 5000 (http)
+2022-14-10 21:50[INFO][restartedMain][o.a.c.c.StandardService:173]Starting service [Tomcat]
+2022-14-10 21:50[INFO][restartedMain][o.a.c.c.StandardEngine:173]Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-14-10 21:50[INFO][restartedMain][o.a.c.c.C.[.[.[/]:173]Initializing Spring embedded WebApplicationContext
+2022-14-10 21:50[INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292]Root WebApplicationContext: initialization completed in 2523 ms
+2022-14-10 21:50[INFO][restartedMain][o.h.j.i.u.LogHelper:31]HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-10 21:50[INFO][restartedMain][o.h.Version:44]HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-14-10 21:50[INFO][restartedMain][o.h.a.c.Version:56]HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-10 21:50[INFO][restartedMain][c.z.h.HikariDataSource:110]HikariPool-1 - Starting...
+2022-14-10 21:50[INFO][restartedMain][c.z.h.HikariDataSource:123]HikariPool-1 - Start completed.
+2022-14-10 21:50[INFO][restartedMain][o.h.d.Dialect:175]HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-14-10 21:50[INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52]HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-10 21:50[INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437]Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 21:50[WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219]spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-10 21:50[WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103]Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-14-10 21:50[INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:59]LiveReload server is running on port 35729
+2022-14-10 21:50[INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220]Tomcat started on port(s): 5000 (http) with context path ''
+2022-14-10 21:50[INFO][restartedMain][c.e.u.UserManagementApplication:61]Started UserManagementApplication in 8.051 seconds (JVM running for 8.874)
+2022-14-10 21:50[INFO][restartedMain][c.e.u.UserManagementApplication:18]Application Loaded Successfully.
+2022-14-10 21:50[INFO][http-nio-5000-exec-1][o.a.c.c.C.[.[.[/]:173]Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-10 21:50[INFO][http-nio-5000-exec-1][o.s.w.s.DispatcherServlet:525]Initializing Servlet 'dispatcherServlet'
+2022-14-10 21:50[INFO][http-nio-5000-exec-1][o.s.w.s.DispatcherServlet:547]Completed initialization in 1 ms
+2022-14-10 21:51[WARN][http-nio-5000-exec-3][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not verified!]
+2022-14-10 21:51[WARN][http-nio-5000-exec-5][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: user is present but not verified!]
+2022-14-10 21:54[WARN][http-nio-5000-exec-7][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: Wrong Password!]
+2022-14-10 21:54[WARN][http-nio-5000-exec-9][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208]Resolved [com.example.usermanagement.exception.UserException: Login Failed, Wrong email or password!!!]
+2022-14-10 22:00[INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651]Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-10 22:00[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350]HikariPool-1 - Shutdown initiated...
+2022-14-10 22:00[INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352]HikariPool-1 - Shutdown completed.
