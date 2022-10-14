@@ -15,7 +15,7 @@ public class TokenUtil {
     private static final String TOKEN_SECRET = "BookStore";
 
 
-    public String createToken(int id)   {
+    public String createToken(int id) {
 
         try {
             //to set algorithm
@@ -40,23 +40,22 @@ public class TokenUtil {
      * @param token
      * @return
      */
-    public int decodeToken(String token)
-    {
+    public int decodeToken(String token) {
         int id;
         //for verification algorithm
         Verification verification = null;
         try {
             verification = JWT.require(Algorithm.HMAC256(TOKEN_SECRET));
-        } catch (IllegalArgumentException  e) {
+        } catch (IllegalArgumentException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        JWTVerifier jwtverifier=verification.build();
+        JWTVerifier jwtverifier = verification.build();
         //to decode token
-        DecodedJWT decodedjwt=jwtverifier.verify(token);
+        DecodedJWT decodedjwt = jwtverifier.verify(token);
 
-        Claim claim=decodedjwt.getClaim("user_id");
-        id=claim.asInt();
+        Claim claim = decodedjwt.getClaim("user_id");
+        id = claim.asInt();
         return id;
     }
 }

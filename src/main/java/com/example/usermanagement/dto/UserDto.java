@@ -2,6 +2,7 @@ package com.example.usermanagement.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
 @Data
@@ -23,5 +24,6 @@ public class UserDto {
     LocalDateTime createdTimeStamp = LocalDateTime.now();
     LocalDateTime updatedTimeStamp = LocalDateTime.now();
     boolean verified = false;
+
 }
 

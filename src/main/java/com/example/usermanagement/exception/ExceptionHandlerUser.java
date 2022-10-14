@@ -12,11 +12,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 @ControllerAdvice
 @Slf4j
 public class ExceptionHandlerUser {
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ResponseDto> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){
+    public ResponseEntity<ResponseDto> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
         List<ObjectError> errorList = exception.getBindingResult().getAllErrors();
         List<String> error_message = errorList.stream()
                 .map(objErr -> objErr.getDefaultMessage())
@@ -24,8 +25,9 @@ public class ExceptionHandlerUser {
         ResponseDto responseDTO = new ResponseDto("Exception while processing REST request", error_message.toString());
         return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
     }
-    @ExceptionHandler(userException.class)
-    public ResponseEntity<ResponseDto> handleAddressBookException(userException exception){
+
+    @ExceptionHandler(UserException.class)
+    public ResponseEntity<ResponseDto> handleAddressBookException(UserException exception) {
         ResponseDto resDTO = new ResponseDto("Exception while processing REST request", exception.getMessage());
         return new ResponseEntity(resDTO, HttpStatus.BAD_REQUEST);
 

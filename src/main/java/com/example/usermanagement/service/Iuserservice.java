@@ -3,9 +3,9 @@ package com.example.usermanagement.service;
 import com.example.usermanagement.dto.LoginDto;
 import com.example.usermanagement.dto.UserDto;
 import com.example.usermanagement.dto.UserPrivilegeDto;
+import com.example.usermanagement.model.LoginHistory;
 import com.example.usermanagement.model.User;
 import com.example.usermanagement.model.UserPrivilege;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -15,8 +15,11 @@ public interface Iuserservice {
     List<User> getall();
 
     String resetPassword(LoginDto loginDto);
+
     String forgotPassword(String email);
+
     User verifyUser(String token);
+
     User loginUser(LoginDto loginDTO);
 
 
@@ -39,4 +42,10 @@ public interface Iuserservice {
     int getAllUsersByAgeAbove40();
 
     int getAllUsersByAgeUnder18();
+
+    List<LoginHistory> getLoginHistory(String email);
+
+    User findUserById(int id);
+
+    String findProfilePic(int id);
 }

@@ -37,6 +37,12 @@ public class ResponseDto {
         this.message = s;
         this.object = permission;
     }
+
+    public ResponseDto(String s, Object loginHistorys) {
+        this.message = s;
+        this.object = loginHistorys;
+
+    }
 }
 
 
