@@ -6,8 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+
 /**
- *  Response DTO class getting result as object and with message
+ * Response DTO class getting result as object and with message
  */
 @Data
 @NoArgsConstructor

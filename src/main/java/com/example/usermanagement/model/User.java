@@ -10,8 +10,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
+
 /**
- *Entity class of user for creating table of user details
+ * Entity class of user for creating table of user details
  */
 @Entity
 @NoArgsConstructor
@@ -38,7 +39,6 @@ public class User {
     LocalDateTime updatedTimeStamp = LocalDateTime.now();
     boolean verified = false;
     boolean status = false;
-
 
 
     public User(UserDto userDTO) {

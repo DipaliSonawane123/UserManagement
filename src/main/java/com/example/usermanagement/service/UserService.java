@@ -85,13 +85,13 @@ public class UserService implements Iuserservice {
                 //String pass = login.get().getPassword();
                 if (userDetails.get().getPassword().equals(loginDto.getPassword())) {
                     LocalDateTime loginDateTime = LocalDateTime.now();
-                    LoginHistory loginHistorys = new LoginHistory();
-                    loginHistorys.setLoginDataTime(loginDateTime);
-                    loginHistorys.setEmailId(loginDto.getEmail());
-                    loginHistorys.setUserId(userDetails.get().getUserId());
-                     userDetails.get().setStatus(true);
-                      userRepo.save(userDetails.get());
-                    loginHistoryRepo.save(loginHistorys);
+                    LoginHistory loginHistory = new LoginHistory();
+                    loginHistory.setLoginDataTime(loginDateTime);
+                    loginHistory.setEmailId(loginDto.getEmail());
+                    loginHistory.setUserId(userDetails.get().getUserId());
+                    userDetails.get().setStatus(true);
+                    userRepo.save(userDetails.get());
+                    loginHistoryRepo.save(loginHistory);
                     emailSender.sendEmail(userDetails.get().getEmailId(), "About Login", "Login Successful!");
                     return userDetails.get();
 
@@ -183,6 +183,10 @@ public class UserService implements Iuserservice {
         }
 
     }
+
+    /**
+     * Method to  logout
+     */
     @Override
     public User logout(int userId) {
         Optional<User> user = userRepo.findById(userId);
